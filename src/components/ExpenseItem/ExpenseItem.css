@@ -2,10 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
     font-size: 25px;
     margin: 20px 0;
-    padding: 0 20px;
+    padding: 5px 20px;
     border-radius: 10px;
     background-color: hsla(0,0%,100%,.2);
     -webkit-backdrop-filter: blur(30px);
@@ -20,10 +19,6 @@
     display: flex;
     align-items: center;
 
-}
-
-.expense-item__date {
-    margin: 0;
 }
 
 .expense-item__title {

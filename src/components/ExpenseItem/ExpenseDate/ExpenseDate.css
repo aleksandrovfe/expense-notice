@@ -1,0 +1,23 @@
+.expense-date {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+.expense-date > p {
+    text-align: center;
+}
+
+.expense-date__month {
+    font-size: 35px;
+}
+
+.expense-date__year {
+    font-size: 20px;
+}
+
+.expense-date__day {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
