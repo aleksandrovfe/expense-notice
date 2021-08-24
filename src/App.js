@@ -1,5 +1,6 @@
 import React from "react";
 import {ExpensesList} from "./components/ExpensesList/ExpensesList";
+import {NewExpense} from "./components/NewExpense/NewExpense";
 
 function App() {
     const expenses = [
@@ -10,6 +11,7 @@ function App() {
 
     return (
         <>
+            <NewExpense />
             <ExpensesList expenses={expenses}/>
         </>
     );
