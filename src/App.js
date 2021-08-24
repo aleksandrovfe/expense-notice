@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {ExpenseItem} from "./components/ExpenseItem/ExpenseItem";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const expense = [
+        {id: 1, date: new Date(2021, 3, 12), title: 'Car insurance', amount: 254.83},
+        {id: 2, date: new Date(2020, 5, 8), title: 'Dog insurance', amount: 1254.11},
+        {id: 3, date: new Date(2021, 9, 2), title: 'Frog insurance', amount: 4.24},
+    ]
+
+    return (
+        <>
+            {expense.map(item => (
+                <React.Fragment key={item.id}>
+                    <ExpenseItem date={item.date} title={item.title} amount={item.amount}/>
+                </React.Fragment>
+            ))}
+        </>
+    );
 }
 
 export default App;
