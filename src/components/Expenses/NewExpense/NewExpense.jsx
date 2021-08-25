@@ -1,5 +1,6 @@
 import {NewExpenseForm} from "./NewExpenseForm/NewExpenseForm";
 import {useState} from "react";
+import {AddNewExpenseMessage} from "./AddNewExpenseMessage/AddNewExpenseMessage";
 
 export const NewExpense = ({onAddExpense}) => {
     const [toggleShowModal, setToggleShowModal] = useState(false)
@@ -14,10 +15,12 @@ export const NewExpense = ({onAddExpense}) => {
         onAddExpense(newExpense)
     }
 
-    if (toggleShowModal) {
-        return <NewExpenseForm onSubmitNewExpense={submitNewExpenseHandler}/>
-    } else {
-        return <AddNewExpenseMessage />
-    }
+    const toggleShowModalHandler = () => setToggleShowModal(prevToggle => !prevToggle)
 
+
+    if (toggleShowModal) {
+        return <NewExpenseForm onSubmitNewExpense={submitNewExpenseHandler} onToggleShowModal={toggleShowModalHandler}/>
+    } else {
+        return <AddNewExpenseMessage onToggleShowModal={toggleShowModalHandler}/>
+    }
 }

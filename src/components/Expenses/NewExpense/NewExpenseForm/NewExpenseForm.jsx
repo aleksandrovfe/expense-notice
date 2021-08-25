@@ -2,7 +2,7 @@ import './NewExpenseForm.css'
 import {Card} from "../../ExpensesList/Card/Card";
 import {useState} from "react";
 
-export const NewExpenseForm = ({onSubmitNewExpense}) => {
+export const NewExpenseForm = ({onSubmitNewExpense, onToggleShowModal}) => {
     const [enteredTitle, setEnteredTitle] = useState('')
     const [enteredAmount, setEnteredAmount] = useState('')
     const [enteredDate, setEnteredDate] = useState('')
@@ -42,6 +42,7 @@ export const NewExpenseForm = ({onSubmitNewExpense}) => {
                 </div>
                 <div className="form__actions">
                     <button className="form__submit-btn">Add new expense</button>
+                    <button className="form__submit-btn" onClick={onToggleShowModal}>Cancel</button>
                 </div>
             </Card>
         </form>

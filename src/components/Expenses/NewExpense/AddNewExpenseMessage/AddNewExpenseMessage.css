@@ -1,0 +1,28 @@
+.add-expense-message {
+    max-width: 80%;
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-expense-message__btn {
+    padding: 20px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: hsla(0,0%,100%,.2);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    border: 2px solid transparent;
+    background-clip: border-box;
+    box-shadow: 10px 10px 10px rgb(46 54 68 / 3%);
+    transition: 0.3s;
+}
+
+.add-expense-message__btn:hover {
+    background-color: hsl(0, 0%, 100%);
+    color: black;
+}

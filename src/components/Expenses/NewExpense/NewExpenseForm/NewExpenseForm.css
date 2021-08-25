@@ -41,6 +41,7 @@
 .form__submit-btn {
     outline: none;
     padding: 10px 20px;
+    margin-right: 20px;
     font-size: 25px;
     color: white;
     cursor: pointer;
