@@ -1,12 +1,10 @@
 import React from "react";
 import {ExpenseItem} from "./ExpenseItem/ExpenseItem";
-import {ExpenseFilter} from "./ExpenseFilter/ExpenseFilter";
 import './ExpensesList.css'
 
-export const ExpensesList = ({expenses, saveFilteredDate}) => {
-    return (
-        <>
-            <ExpenseFilter onSaveFilteredDate={saveFilteredDate}/>
+export const ExpensesList = ({expenses}) => {
+    if (expenses.length > 0) {
+        return (
             <div className="expenses-list">
                 {expenses.map(item => (
                     <React.Fragment key={item.id}>
@@ -14,6 +12,8 @@ export const ExpensesList = ({expenses, saveFilteredDate}) => {
                     </React.Fragment>
                 ))}
             </div>
-        </>
-    )
+        )
+    } else {
+        return <p className="expenses-list__empty-list">No expenses found.</p>
+    }
 }
