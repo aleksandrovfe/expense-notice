@@ -1,0 +1,27 @@
+.chart-bar {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chart-bar__border {
+    max-height: 100px;
+    height: 150px;
+    border: 1px solid #6000f1;
+    border-radius: 20px;
+    width: 30px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.chart-bar__inner {
+    background-color: rgba(0, 253, 103, 0.6);
+    width: 100%;
+}
+
+.chart-bar__label {
+    color: white;
+    font-size: 25px;
+}
