@@ -1,0 +1,11 @@
+.expenses-list {
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+.expenses-list__empty-list {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin: 50px 0;
+}
