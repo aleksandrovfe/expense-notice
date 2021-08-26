@@ -19,6 +19,7 @@
 .chart-bar__inner {
     background-color: rgba(0, 253, 103, 0.6);
     width: 100%;
+    transition: all 0.3s ease-out;
 }
 
 .chart-bar__label {
